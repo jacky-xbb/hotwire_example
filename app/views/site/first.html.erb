@@ -1,0 +1,53 @@
+<%= turbo_stream_from "teststr" %>
+
+<div id="broadcasts"></div>
+<br />
+<hr />
+
+<div class="flex flex-col mx-auto space-y-8">
+  <table class="w-full max-w-xl mx-auto mt-5 table-auto shadow-lg">
+    <thead class="text-white bg-gray-700">
+      <tr>
+        <th class="px-4 py-2">Name</th>
+        <th class="px-4 py-2">Email</th>
+        <th class="px-4 py-2">Age</th>
+      </tr>
+    </thead>
+    <tbody class="text-gray-700" id="people">
+      <tr>
+        <td class="border px-4 py-2">John Doe</td>
+        <td class="border px-4 py-2">johndoe@example.com</td>
+        <td class="border px-4 py-2">30</td>
+      </tr>
+      <tr class="bg-gray-100">
+        <td class="border px-4 py-2">Jane Smith</td>
+        <td class="border px-4 py-2">jsmith@example.com</td>
+        <td class="border px-4 py-2">25</td>
+      </tr>
+      <tr>
+        <td class="border px-4 py-2">Alex Johnson</td>
+        <td class="border px-4 py-2">alexj@example.com</td>
+        <td class="border px-4 py-2">35</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <%= render "site/form" %>
+
+
+  <div class="border-b border-gray-300"</div>
+
+  <div>
+    Total: <span class="counter"><%= @count %></span>
+  </div>
+
+  <div id="someid" data-controller="test" data-test-myelement-class="bg-black mt-4" data-test-name-value="John" data-test-age-value="25">
+    <input type="text" data-test-target="text" />
+    <button data-action="click->test#hello">Click Me!</button>
+  </div>
+
+  <%= link_to "Second", second_page_path %>
+
+
+</div>
+

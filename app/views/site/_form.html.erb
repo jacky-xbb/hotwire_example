@@ -1,0 +1,27 @@
+<span class="counter">Total:<%= @count %></span>
+
+<%= form_with url: third_page_path, scope: "person", local: true, class: "max-w-xl mx-auto my-5 p-4 shadow-lg" do |f| %>
+  <div class="mb-4">
+    <%= hidden_field_tag :count, nil, id: "hidden-counter", value: @count, class: "shadow appearance-none border rounded w-full
+      py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" %>
+  </div>
+  <div class="mb-4">
+    <%= f.label :name, class: "block text-gray-700 text-sm font-bold mb-2" %>
+    <%= f.text_field :name, placeholder: "Name", class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700
+    leading-tight focus:outline-none focus:shadow-outline" %>
+  </div>
+  <div class="mb-4">
+    <%= f.label :email, class: "block text-gray-700 text-sm font-bold mb-2" %>
+    <%= f.text_field :email, placeholder: "Email", class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700
+    leading-tight focus:outline-none focus:shadow-outline" %>
+  </div>
+  <div class="mb-6">
+    <%= f.label :age, class: "block text-gray-700 text-sm font-bold mb-2" %>
+    <%= f.text_field :age, placeholder: "Age", class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700
+    leading-tight focus:outline-none focus:shadow-outline" %>
+  </div>
+  <div class="flex items-center justify-between">
+    <%= f.submit "Save", class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" %>
+  </div>
+<% end %>
+
